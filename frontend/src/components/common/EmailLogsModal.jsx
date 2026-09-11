@@ -39,7 +39,7 @@ export const EmailLogsModal = ({ isOpen, onClose }) => {
       maxWidth="max-w-5xl"
     >
       <div className="space-y-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-3 bg-indigo-50/70 border border-indigo-100 rounded-xl text-xs text-indigo-900">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-3 bg-violet-50/70 border border-violet-100 rounded-xl text-xs text-violet-900">
           <p>
             This dashboard displays automated email notifications dispatched by the system for{' '}
             <strong>Task Assignments</strong> and <strong>Status Updates</strong>.
@@ -47,7 +47,7 @@ export const EmailLogsModal = ({ isOpen, onClose }) => {
           <button
             onClick={fetchEmailLogs}
             disabled={loading}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-indigo-200 text-indigo-700 font-semibold rounded-lg hover:bg-indigo-50 shadow-sm transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-violet-200 text-violet-700 font-semibold rounded-lg hover:bg-violet-50 shadow-sm transition-colors"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
             Refresh
@@ -71,7 +71,7 @@ export const EmailLogsModal = ({ isOpen, onClose }) => {
                     key={log._id}
                     onClick={() => setSelectedLog(log)}
                     className={`p-3.5 cursor-pointer transition-colors text-left ${
-                      isSelected ? 'bg-indigo-50/90 border-l-4 border-indigo-600' : 'hover:bg-slate-50'
+                      isSelected ? 'bg-violet-50/90 border-l-4 border-violet-600' : 'hover:bg-slate-50'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1">
@@ -104,7 +104,7 @@ export const EmailLogsModal = ({ isOpen, onClose }) => {
                           log.status === 'Sent'
                             ? 'text-emerald-600'
                             : log.status === 'Simulated'
-                            ? 'text-indigo-600'
+                            ? 'text-violet-600'
                             : 'text-rose-600'
                         }`}
                       >
@@ -133,7 +133,7 @@ export const EmailLogsModal = ({ isOpen, onClose }) => {
                           href={selectedLog.previewUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-semibold"
+                          className="flex items-center gap-1 text-violet-600 hover:text-violet-800 font-semibold"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />
                           Open Ethereal Preview

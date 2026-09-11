@@ -4,7 +4,7 @@ import { Sidebar } from './Sidebar';
 
 export const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-violet-50">
       <Navbar />
       <div className="flex-1 flex">
         <Sidebar />

@@ -51,7 +51,7 @@ export const NotificationProvider = ({ children }) => {
                 ? 'bg-rose-50 border-rose-200 text-rose-900'
                 : toast.type === 'warning'
                 ? 'bg-amber-50 border-amber-200 text-amber-900'
-                : 'bg-indigo-50 border-indigo-200 text-indigo-900'
+                : 'bg-violet-50 border-violet-200 text-violet-900'
             }`}
           >
             <div className="flex-shrink-0 mt-0.5">
@@ -65,7 +65,7 @@ export const NotificationProvider = ({ children }) => {
                 <AlertTriangle className="w-5 h-5 text-amber-600" />
               )}
               {toast.type === 'info' && (
-                <Info className="w-5 h-5 text-indigo-600" />
+                <Info className="w-5 h-5 text-violet-600" />
               )}
             </div>
             <div className="flex-1 font-medium leading-snug">{toast.message}</div>

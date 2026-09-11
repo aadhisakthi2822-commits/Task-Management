@@ -84,17 +84,17 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-950 to-slate-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8 px-4">
       {/* Brand Header */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-indigo-600 text-white shadow-xl shadow-indigo-500/30 mb-4 ring-8 ring-indigo-500/10">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-violet-600 text-white shadow-xl shadow-violet-500/30 mb-4 ring-8 ring-violet-500/10">
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
           Task Management System
         </h1>
-        <p className="mt-1 text-xs sm:text-sm text-indigo-200 font-medium">
-          MERN Stack Technical Assessment &bull; Xplore Intellects
+        <p className="mt-1 text-xs sm:text-sm text-violet-200 font-medium">
+          MERN Stack Mini Project
         </p>
       </div>
 
@@ -107,7 +107,7 @@ export const Login = () => {
               onClick={() => handleTabChange('admin')}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-bold transition-all ${
                 activeTab === 'admin'
-                  ? 'bg-white text-indigo-700 shadow-sm'
+                  ? 'bg-white text-violet-700 shadow-sm'
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -119,7 +119,7 @@ export const Login = () => {
               onClick={() => handleTabChange('employee')}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-bold transition-all ${
                 activeTab === 'employee'
-                  ? 'bg-white text-indigo-700 shadow-sm'
+                  ? 'bg-white text-violet-700 shadow-sm'
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -152,7 +152,7 @@ export const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@xplore.com"
-                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
                 />
               </div>
             </div>
@@ -171,7 +171,7 @@ export const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
                 />
               </div>
             </div>
@@ -179,7 +179,7 @@ export const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-4 rounded-xl shadow-lg shadow-indigo-200 font-bold text-sm text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 transition-all cursor-pointer"
+              className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-4 rounded-xl shadow-lg shadow-violet-200 font-bold text-sm text-white bg-violet-600 hover:bg-violet-700 disabled:opacity-50 transition-all cursor-pointer"
             >
               {loading ? (
                 'Verifying credentials...'
@@ -206,7 +206,7 @@ export const Login = () => {
                 onClick={() =>
                   handleQuickLogin('admin', 'admin@xplore.com', 'Admin@123')
                 }
-                className="px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 transition-colors text-left"
+                className="px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 transition-colors text-left"
               >
                 <div className="font-bold">👑 Admin</div>
                 <div className="text-[10px] text-slate-400 truncate">admin@xplore.com</div>
@@ -221,7 +221,7 @@ export const Login = () => {
                     'Employee@123'
                   )
                 }
-                className="px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 transition-colors text-left"
+                className="px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 bg-slate-50 text-slate-700 hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 transition-colors text-left"
               >
                 <div className="font-bold">💼 Employee</div>
                 <div className="text-[10px] text-slate-400 truncate">alex.rivera@xplore.com</div>
@@ -231,7 +231,7 @@ export const Login = () => {
         </div>
 
         {/* Footer info */}
-        <p className="mt-4 text-center text-xs text-indigo-300/80">
+        <p className="mt-4 text-center text-xs text-violet-300/80">
           Built with MongoDB, Express, React, Node.js &amp; Nodemailer
         </p>
       </div>

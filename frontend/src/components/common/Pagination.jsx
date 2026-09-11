@@ -46,7 +46,7 @@ export const Pagination = ({
             <select
               value={limit}
               onChange={(e) => onLimitChange(Number(e.target.value))}
-              className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2 py-1 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2 py-1 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value={5}>5</option>
               <option value={10}>10</option>
@@ -73,7 +73,7 @@ export const Pagination = ({
             onClick={() => onPageChange(pageNum)}
             className={`min-w-[32px] h-8 px-2.5 rounded-lg text-xs font-semibold transition-colors ${
               pageNum === currentPage
-                ? 'bg-indigo-600 text-white shadow-sm'
+                ? 'bg-violet-600 text-white shadow-sm'
                 : 'border border-slate-200 text-slate-700 hover:bg-slate-50'
             }`}
           >

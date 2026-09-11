@@ -116,7 +116,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
             className={`w-full px-3.5 py-2 rounded-xl border text-sm font-medium focus:outline-none focus:ring-2 ${
               errors.title
                 ? 'border-rose-300 ring-rose-200'
-                : 'border-slate-200 focus:border-indigo-500 focus:ring-indigo-200'
+                : 'border-slate-200 focus:border-violet-500 focus:ring-violet-200'
             }`}
           />
           {errors.title && (
@@ -137,7 +137,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
             className={`w-full px-3.5 py-2 rounded-xl border text-sm focus:outline-none focus:ring-2 ${
               errors.description
                 ? 'border-rose-300 ring-rose-200'
-                : 'border-slate-200 focus:border-indigo-500 focus:ring-indigo-200'
+                : 'border-slate-200 focus:border-violet-500 focus:ring-violet-200'
             }`}
           />
           {errors.description && (
@@ -156,7 +156,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
             className={`w-full px-3.5 py-2 rounded-xl border text-sm font-medium bg-white focus:outline-none focus:ring-2 ${
               errors.assignedTo
                 ? 'border-rose-300 ring-rose-200'
-                : 'border-slate-200 focus:border-indigo-500 focus:ring-indigo-200'
+                : 'border-slate-200 focus:border-violet-500 focus:ring-violet-200'
             }`}
           >
             <option value="" disabled>
@@ -182,7 +182,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
             <select
               value={formData.priority}
               onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
-              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-200"
             >
               <option value="High">🔴 High Priority</option>
               <option value="Medium">🟡 Medium Priority</option>
@@ -198,7 +198,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
               <select
                 value={formData.status}
                 onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-200"
               >
                 <option value="Not Started">⚪ Not Started</option>
                 <option value="Pending / In Progress">🟡 Pending / In Progress</option>
@@ -214,7 +214,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
                 type="date"
                 value={formData.dueDate}
                 onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-200"
               />
             </div>
           )}
@@ -229,7 +229,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
               type="date"
               value={formData.dueDate}
               onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+              className="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-200"
             />
           </div>
         )}
@@ -255,7 +255,7 @@ export const TaskFormModal = ({ isOpen, onClose, taskToEdit, onSaved, employees 
           <button
             type="submit"
             disabled={submitting}
-            className="px-5 py-2 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-md shadow-indigo-100 disabled:opacity-50 transition-all flex items-center gap-2"
+            className="px-5 py-2 text-sm font-bold text-white bg-violet-600 hover:bg-violet-700 rounded-xl shadow-md shadow-violet-100 disabled:opacity-50 transition-all flex items-center gap-2"
           >
             {submitting ? 'Saving...' : isEditing ? 'Update Task' : 'Assign Task'}
           </button>

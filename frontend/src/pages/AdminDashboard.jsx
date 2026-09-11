@@ -64,15 +64,15 @@ export const AdminDashboard = () => {
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-gradient-to-r from-indigo-900 to-indigo-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-indigo-950/10">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-gradient-to-r from-violet-900 to-violet-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-violet-950/10">
         <div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/30 text-indigo-100 border border-indigo-400/30 mb-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-violet-500/30 text-violet-100 border border-violet-400/30 mb-2">
             Administrator Portal
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Task Management Overview
           </h1>
-          <p className="text-indigo-200 text-xs sm:text-sm mt-1 max-w-xl">
+          <p className="text-violet-200 text-xs sm:text-sm mt-1 max-w-xl">
             Monitor company assignments, assign work to employees, and track real-time delivery statuses.
           </p>
         </div>
@@ -80,9 +80,9 @@ export const AdminDashboard = () => {
         <div className="flex items-center gap-3 w-full sm:w-auto">
           <button
             onClick={() => setIsAssignModalOpen(true)}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-indigo-900 hover:bg-indigo-50 font-bold text-sm rounded-xl shadow-md transition-all cursor-pointer"
+            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-violet-900 hover:bg-violet-50 font-bold text-sm rounded-xl shadow-md transition-all cursor-pointer"
           >
-            <PlusCircle className="w-4 h-4 text-indigo-600" />
+            <PlusCircle className="w-4 h-4 text-violet-600" />
             Assign New Task
           </button>
         </div>
@@ -94,7 +94,7 @@ export const AdminDashboard = () => {
           <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">
             Task Statistics
           </h2>
-          <span className="text-xs font-semibold text-indigo-600">
+          <span className="text-xs font-semibold text-violet-600">
             {stats.completionRate}% Overall Completion
           </span>
         </div>
@@ -104,7 +104,7 @@ export const AdminDashboard = () => {
             title="Total Assigned"
             count={stats.totalTasks}
             icon={Layers}
-            color="indigo"
+            color="violet"
             subtitle={`${employees.length} Active Employees`}
           />
           <StatsCard
@@ -136,7 +136,7 @@ export const AdminDashboard = () => {
         {/* Priority breakdown card */}
         <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
           <h3 className="text-sm font-bold text-slate-900 mb-4 flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-indigo-600" />
+            <TrendingUp className="w-4 h-4 text-violet-600" />
             Priority Distribution
           </h3>
 
@@ -212,7 +212,7 @@ export const AdminDashboard = () => {
             <span className="text-slate-500">Need to view sent emails?</span>
             <button
               onClick={openEmailDrawer}
-              className="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-1"
+              className="text-violet-600 hover:text-violet-800 font-bold flex items-center gap-1"
             >
               <Mail className="w-3.5 h-3.5" />
               Email Logs
@@ -224,12 +224,12 @@ export const AdminDashboard = () => {
         <div className="lg:col-span-2 bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Users className="w-4 h-4 text-indigo-600" />
+              <Users className="w-4 h-4 text-violet-600" />
               Employee Workload &amp; Status
             </h3>
             <Link
               to="/admin/employees"
-              className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+              className="text-xs font-bold text-violet-600 hover:text-violet-800 flex items-center gap-1"
             >
               View All Employees
               <ArrowRight className="w-3.5 h-3.5" />
@@ -278,7 +278,7 @@ export const AdminDashboard = () => {
           </div>
           <Link
             to="/admin/tasks"
-            className="px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs rounded-xl transition-colors flex items-center gap-1"
+            className="px-4 py-2 bg-violet-50 hover:bg-violet-100 text-violet-700 font-bold text-xs rounded-xl transition-colors flex items-center gap-1"
           >
             Manage All Tasks
             <ArrowRight className="w-3.5 h-3.5" />

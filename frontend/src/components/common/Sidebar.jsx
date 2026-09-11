@@ -45,7 +45,7 @@ export const Sidebar = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-100'
+                        ? 'bg-violet-600 text-white shadow-sm shadow-violet-100'
                         : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                     }`
                   }
@@ -64,18 +64,18 @@ export const Sidebar = () => {
           </p>
           <button
             onClick={openEmailDrawer}
-            className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+            className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-violet-50 hover:text-violet-700 transition-colors"
           >
-            <Mail className="w-4 h-4 text-indigo-600" />
+            <Mail className="w-4 h-4 text-violet-600" />
             <span>Email Audit Center</span>
           </button>
         </div>
       </div>
 
       {/* Role Card at bottom */}
-      <div className="p-3.5 rounded-2xl bg-gradient-to-br from-slate-50 to-indigo-50/50 border border-slate-200/70 text-xs">
+      <div className="p-3.5 rounded-2xl bg-gradient-to-br from-slate-50 to-violet-50/50 border border-slate-200/70 text-xs">
         <div className="flex items-center gap-2 mb-1 text-slate-800 font-bold">
-          <Layers className="w-4 h-4 text-indigo-600" />
+          <Layers className="w-4 h-4 text-violet-600" />
           <span>Role-Based Access</span>
         </div>
         <p className="text-slate-500 text-[11px]">

@@ -158,7 +158,7 @@ export const AdminTasks = () => {
             setTaskToEdit(null);
             setIsFormModalOpen(true);
           }}
-          className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow-md shadow-indigo-100 transition-all cursor-pointer"
+          className="flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm rounded-xl shadow-md shadow-violet-100 transition-all cursor-pointer"
         >
           <PlusCircle className="w-4 h-4" />
           Assign New Task
@@ -178,7 +178,7 @@ export const AdminTasks = () => {
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Search by title, description, or employee..."
-              className="w-full pl-10 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full pl-10 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -187,7 +187,7 @@ export const AdminTasks = () => {
             <select
               value={selectedStatus}
               onChange={handleStatusFilter}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Statuses</option>
               <option value="Not Started">Not Started</option>
@@ -201,7 +201,7 @@ export const AdminTasks = () => {
             <select
               value={selectedPriority}
               onChange={handlePriorityFilter}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Priorities</option>
               <option value="High">High Priority</option>
@@ -215,7 +215,7 @@ export const AdminTasks = () => {
             <select
               value={selectedEmployee}
               onChange={handleEmployeeFilter}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Employees</option>
               {employees.map((emp) => (
@@ -231,7 +231,7 @@ export const AdminTasks = () => {
           <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-500">
             <span>
               Active filters found{' '}
-              <strong className="text-indigo-600 font-bold">{totalTasks}</strong> matching tasks
+              <strong className="text-violet-600 font-bold">{totalTasks}</strong> matching tasks
             </span>
             <button
               onClick={resetFilters}
@@ -263,7 +263,7 @@ export const AdminTasks = () => {
                 <tr>
                   <td colSpan={6} className="text-center py-12 text-slate-400">
                     <div className="flex items-center justify-center gap-2">
-                      <div className="w-5 h-5 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-violet-600 border-t-transparent rounded-full animate-spin" />
                       <span>Loading task records...</span>
                     </div>
                   </td>
@@ -289,7 +289,7 @@ export const AdminTasks = () => {
 
                     <td className="py-4 px-6 whitespace-nowrap">
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-[10px]">
+                        <div className="w-7 h-7 rounded-full bg-violet-50 border border-violet-100 text-violet-700 font-bold flex items-center justify-center text-[10px]">
                           {task.assignedTo?.name?.charAt(0) || 'U'}
                         </div>
                         <div>
@@ -322,7 +322,7 @@ export const AdminTasks = () => {
                         {task.statusHistory && task.statusHistory.length > 0 && (
                           <button
                             onClick={() => setViewHistoryTask(task)}
-                            className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+                            className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:text-violet-600 hover:bg-violet-50 transition-colors"
                             title="View Status History"
                           >
                             <History className="w-3.5 h-3.5" />
@@ -330,7 +330,7 @@ export const AdminTasks = () => {
                         )}
                         <button
                           onClick={() => handleEdit(task)}
-                          className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+                          className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-violet-600 hover:bg-violet-50 transition-colors"
                           title="Edit Task"
                         >
                           <Edit2 className="w-3.5 h-3.5" />

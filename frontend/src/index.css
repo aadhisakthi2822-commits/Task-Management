@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 selection:bg-indigo-500 selection:text-white min-h-screen;
+    @apply bg-violet-50 text-slate-800 selection:bg-violet-500 selection:text-white min-h-screen;
   }
 }
 
@@ -14,12 +14,12 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f5f3ff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #c4b5fd;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #a78bfa;
 }

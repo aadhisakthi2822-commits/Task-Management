@@ -90,14 +90,14 @@ export const StatusUpdateModal = ({ isOpen, onClose, task, onStatusUpdated }) =>
                   onClick={() => setSelectedStatus(item.value)}
                   className={`p-3 rounded-xl border-2 cursor-pointer transition-all flex items-start justify-between ${
                     isSelected
-                      ? 'border-indigo-600 bg-indigo-50/50 shadow-xs'
+                      ? 'border-violet-600 bg-violet-50/50 shadow-xs'
                       : 'border-slate-200 hover:border-slate-300 bg-white'
                   }`}
                 >
                   <div>
                     <p
                       className={`text-xs font-bold ${
-                        isSelected ? 'text-indigo-900' : 'text-slate-800'
+                        isSelected ? 'text-violet-900' : 'text-slate-800'
                       }`}
                     >
                       {item.label}
@@ -105,7 +105,7 @@ export const StatusUpdateModal = ({ isOpen, onClose, task, onStatusUpdated }) =>
                     <p className="text-[11px] text-slate-500 mt-0.5">{item.desc}</p>
                   </div>
                   {isSelected && (
-                    <CheckCircle2 className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-violet-600 flex-shrink-0" />
                   )}
                 </div>
               );
@@ -122,7 +122,7 @@ export const StatusUpdateModal = ({ isOpen, onClose, task, onStatusUpdated }) =>
             placeholder="Add any progress notes, completion summary, or blocker details..."
             value={remarks}
             onChange={(e) => setRemarks(e.target.value)}
-            className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500"
+            className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-violet-200 focus:border-violet-500"
           />
         </div>
 
@@ -144,7 +144,7 @@ export const StatusUpdateModal = ({ isOpen, onClose, task, onStatusUpdated }) =>
           <button
             type="submit"
             disabled={submitting}
-            className="px-5 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-md shadow-indigo-100 disabled:opacity-50 transition-all flex items-center gap-2"
+            className="px-5 py-2 text-xs font-bold text-white bg-violet-600 hover:bg-violet-700 rounded-xl shadow-md shadow-violet-100 disabled:opacity-50 transition-all flex items-center gap-2"
           >
             {submitting ? 'Updating...' : 'Save & Notify Admin'}
           </button>

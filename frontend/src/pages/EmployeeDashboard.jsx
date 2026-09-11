@@ -107,15 +107,15 @@ export const EmployeeDashboard = () => {
   return (
     <div className="space-y-6">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-indigo-950/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-slate-900 to-violet-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-violet-950/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 mb-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-violet-500/30 text-violet-200 border border-violet-400/30 mb-2">
             Employee Workspace
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Welcome, {user?.name}!
           </h1>
-          <p className="text-indigo-200 text-xs sm:text-sm mt-1 max-w-xl">
+          <p className="text-violet-200 text-xs sm:text-sm mt-1 max-w-xl">
             Review your assigned deliverables and update their progress. Each status change automatically informs your Administrator via email.
           </p>
         </div>
@@ -124,7 +124,7 @@ export const EmployeeDashboard = () => {
           onClick={openEmailDrawer}
           className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs rounded-xl transition-colors"
         >
-          <Send className="w-3.5 h-3.5 text-indigo-300" />
+          <Send className="w-3.5 h-3.5 text-violet-300" />
           View Dispatched Emails
         </button>
       </div>
@@ -135,7 +135,7 @@ export const EmployeeDashboard = () => {
           <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">
             My Task Metrics
           </h2>
-          <span className="text-xs font-semibold text-indigo-600">
+          <span className="text-xs font-semibold text-violet-600">
             {stats.completionRate}% Personal Completion
           </span>
         </div>
@@ -145,7 +145,7 @@ export const EmployeeDashboard = () => {
             title="Total Assigned"
             count={stats.totalTasks}
             icon={Layers}
-            color="indigo"
+            color="violet"
             subtitle="Assigned to your queue"
           />
           <StatsCard
@@ -188,7 +188,7 @@ export const EmployeeDashboard = () => {
                 setCurrentPage(1);
               }}
               placeholder="Search your assigned tasks..."
-              className="w-full pl-10 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full pl-10 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -200,7 +200,7 @@ export const EmployeeDashboard = () => {
                 setSelectedStatus(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Statuses</option>
               <option value="Not Started">Not Started</option>
@@ -217,7 +217,7 @@ export const EmployeeDashboard = () => {
                 setSelectedPriority(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-white font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Priorities</option>
               <option value="High">High Priority</option>
@@ -230,7 +230,7 @@ export const EmployeeDashboard = () => {
         {(searchTerm || selectedStatus || selectedPriority) && (
           <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-500">
             <span>
-              Found <strong className="text-indigo-600 font-bold">{totalTasks}</strong> matching tasks
+              Found <strong className="text-violet-600 font-bold">{totalTasks}</strong> matching tasks
             </span>
             <button
               onClick={resetFilters}
@@ -262,7 +262,7 @@ export const EmployeeDashboard = () => {
                 <tr>
                   <td colSpan={6} className="text-center py-12 text-slate-400">
                     <div className="flex items-center justify-center gap-2">
-                      <div className="w-5 h-5 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-violet-600 border-t-transparent rounded-full animate-spin" />
                       <span>Loading your assignments...</span>
                     </div>
                   </td>
@@ -310,7 +310,7 @@ export const EmployeeDashboard = () => {
                         {task.statusHistory && task.statusHistory.length > 0 && (
                           <button
                             onClick={() => setHistoryTask(task)}
-                            className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+                            className="p-1.5 rounded-lg border border-slate-200 text-slate-500 hover:text-violet-600 hover:bg-violet-50 transition-colors"
                             title="View Status History"
                           >
                             <History className="w-3.5 h-3.5" />
@@ -318,7 +318,7 @@ export const EmployeeDashboard = () => {
                         )}
                         <button
                           onClick={() => setTaskToUpdate(task)}
-                          className="px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+                          className="px-3.5 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold text-xs shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
                         >
                           <span>Change Status</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const StatsCard = ({ title, count, icon: Icon, color = 'indigo', subtitle }) => {
+export const StatsCard = ({ title, count, icon: Icon, color = 'violet', subtitle }) => {
   const colorMap = {
-    indigo: {
-      bg: 'bg-indigo-50',
-      iconColor: 'text-indigo-600',
-      border: 'border-indigo-100',
+    violet: {
+      bg: 'bg-violet-50',
+      iconColor: 'text-violet-600',
+      border: 'border-violet-100',
     },
     amber: {
       bg: 'bg-amber-50',
@@ -29,7 +29,7 @@ export const StatsCard = ({ title, count, icon: Icon, color = 'indigo', subtitle
     },
   };
 
-  const scheme = colorMap[color] || colorMap.indigo;
+  const scheme = colorMap[color] || colorMap.violet;
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">

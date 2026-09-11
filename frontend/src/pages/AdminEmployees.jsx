@@ -99,7 +99,7 @@ export const AdminEmployees = () => {
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow-md shadow-indigo-100 transition-all cursor-pointer"
+          className="flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm rounded-xl shadow-md shadow-violet-100 transition-all cursor-pointer"
         >
           <UserPlus className="w-4 h-4" />
           Add New Employee
@@ -117,7 +117,7 @@ export const AdminEmployees = () => {
             placeholder="Search by name, email, or department..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium text-slate-800"
+            className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500 font-medium text-slate-800"
           />
         </div>
       </div>
@@ -140,12 +140,12 @@ export const AdminEmployees = () => {
             >
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-500 to-indigo-700 text-white font-extrabold text-base flex items-center justify-center shadow-md shadow-indigo-200">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-violet-500 to-violet-700 text-white font-extrabold text-base flex items-center justify-center shadow-md shadow-violet-200">
                     {emp.name.charAt(0)}
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900">{emp.name}</h3>
-                    <span className="inline-block text-[11px] font-semibold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100 mt-0.5">
+                    <span className="inline-block text-[11px] font-semibold text-violet-700 bg-violet-50 px-2 py-0.5 rounded-md border border-violet-100 mt-0.5">
                       {emp.department}
                     </span>
                   </div>
@@ -214,7 +214,7 @@ export const AdminEmployees = () => {
               placeholder="e.g. Jordan Miller"
               value={newEmployee.name}
               onChange={(e) => setNewEmployee({ ...newEmployee, name: e.target.value })}
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -228,7 +228,7 @@ export const AdminEmployees = () => {
               placeholder="jordan.miller@xplore.com"
               value={newEmployee.email}
               onChange={(e) => setNewEmployee({ ...newEmployee, email: e.target.value })}
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -241,7 +241,7 @@ export const AdminEmployees = () => {
               onChange={(e) =>
                 setNewEmployee({ ...newEmployee, department: e.target.value })
               }
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 bg-white font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 bg-white font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="Frontend Engineering">Frontend Engineering</option>
               <option value="Backend Engineering">Backend Engineering</option>
@@ -263,7 +263,7 @@ export const AdminEmployees = () => {
               onChange={(e) =>
                 setNewEmployee({ ...newEmployee, password: e.target.value })
               }
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
+              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500 font-mono"
             />
           </div>
 
@@ -276,7 +276,7 @@ export const AdminEmployees = () => {
               placeholder="+1 (555) 000-0000"
               value={newEmployee.phone}
               onChange={(e) => setNewEmployee({ ...newEmployee, phone: e.target.value })}
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -291,7 +291,7 @@ export const AdminEmployees = () => {
             <button
               type="submit"
               disabled={submitting}
-              className="px-5 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-md disabled:opacity-50"
+              className="px-5 py-2 text-xs font-bold text-white bg-violet-600 hover:bg-violet-700 rounded-xl shadow-md disabled:opacity-50"
             >
               {submitting ? 'Creating...' : 'Create Employee Profile'}
             </button>
