@@ -1,0 +1,25 @@
+{
+  "name": "task-management-system",
+  "version": "1.0.0",
+  "description": "MERN Stack Task Management System - Xplore Intellects Technical Assessment",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "start:backend": "npm run start --prefix backend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "task-management",
+    "rbac",
+    "nodemailer"
+  ],
+  "author": "Xplore Intellects Candidate",
+  "license": "ISC"
+}
